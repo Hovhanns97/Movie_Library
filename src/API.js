@@ -24,8 +24,10 @@ export const get_user = async () => {
     const requestToken = await get_request_token();
     if (requestToken.success) {
         const session = await create_session(requestToken);
+        if(session.success) {
+            return fetch(GET_USER_API).then(res => res.json())
+        }
     }
-    return fetch(GET_USER_API).then(res => res.json())
 } 
 
 export const create_session = async (requestToken) => {
