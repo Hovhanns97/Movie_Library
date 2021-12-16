@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Redirect, Switch, Route } from "react-router-dom"
+import Styles from './App.css';
+import MovieList from "./components/Movies";
+import MovieInfo from "./components/Movies/MovieInformation";
 
-function App() {
+import NavbarComponent from "./components/Navbar";
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavbarComponent />
+      <div
+        className="mx-auto containerBig movie"
+      >
+        <Switch>
+          <Route exact path="/" render={() => <Redirect to="/movies" />} />
+          <Route exact path="/movies" render={() => <MovieList />} />
+          <Route path="/movies/:movie_id" render={() => <MovieInfo />}/>
+          <Route path="/favorites" render={() => <div>Favorites</div>} />
+        </Switch>
+      </div>
     </div>
+
   );
 }
 

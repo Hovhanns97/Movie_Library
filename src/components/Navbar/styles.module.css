@@ -1,0 +1,12 @@
+.searchbar {
+    background-color: transparent;
+    border: 1px solid;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: black;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}

@@ -1,0 +1,45 @@
+/*filters*/
+.filters{
+    height: 25%;
+    min-height: 125px;
+    margin: auto;
+}
+
+/*genres*/
+.genres{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.genre{
+    color: white;
+    padding: 10px 15px;
+    background: green;
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.genreActive {
+    color: white;
+    font-weight: 600;
+    padding: 10px 15px;
+    background: rgb(164, 218, 41);
+    border-radius: 50px;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
