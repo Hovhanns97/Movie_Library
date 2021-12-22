@@ -57,5 +57,5 @@ export const getCurrentMovie = (movie_id) => async dispatch => {
 
 export const getUser = () => async dispatch => {
     const response = await get_user();
-    dispatch(setUser(response.data))
+    dispatch(setUser(response?.data))
 }
